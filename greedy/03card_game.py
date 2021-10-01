@@ -1,11 +1,10 @@
 n, m = map(int, input().split())
 
-minvalue = 0
-result = 0
+minvalue = 10001
 
 for i in range(n):
     data = list(map(int, input().split()))
-    minvalue = min(data)
-    result = max(result, minvalue)
+    for a in data:
+        minvalue = min(data)
 
-print(result)
+print(minvalue)
