@@ -69,7 +69,7 @@ while True:
     d[x][y] = 9
     break
   
-  d[x][y] == 9
+  d[x][y] = 9
 
   if d[x+1][y] == 1 and d[x][y+1] == 1:
     break
