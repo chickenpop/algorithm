@@ -23,14 +23,29 @@
 #     print(*i, " ")
 
 # 1462
+# n = int(input())
+# d = [[0 for _ in range(n)] for _ in range(n)]
+# cnt = 0
+
+# for i in range(n):
+#     for j in range(n):
+#         cnt += 1
+#         d[j][i] = cnt
+
+# for i in d:
+#     print(*i, " ")
+
+# 1463
 n = int(input())
 d = [[0 for _ in range(n)] for _ in range(n)]
-cnt = 0
+cnt  = 0
 
 for i in range(n):
-    for j in range(n):
+    for j in range(n-1, -1, -1):
         cnt += 1
         d[j][i] = cnt
 
 for i in d:
-    print(*i, " ")
+    print(*i," ")
+
+# 1464
