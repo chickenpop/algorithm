@@ -36,16 +36,27 @@
 #     print(*i, " ")
 
 # 1463
-n = int(input())
-d = [[0 for _ in range(n)] for _ in range(n)]
-cnt  = 0
+# n = int(input())
+# d = [[0 for _ in range(n)] for _ in range(n)]
+# cnt  = 0
 
-for i in range(n):
-    for j in range(n-1, -1, -1):
-        cnt += 1
-        d[j][i] = cnt
+# for i in range(n):
+#     for j in range(n-1, -1, -1):
+#         cnt += 1
+#         d[j][i] = cnt
 
-for i in d:
-    print(*i," ")
+# for i in d:
+#     print(*i," ")
 
 # 1464
+n, m = map(int, input().split())
+d = [[0 for _ in range(m)] for _ in range(n)]
+cnt = 0
+
+for i in range(n-1, -1, -1):
+    for j in range(m-1, -1, -1):
+        cnt += 1
+        d[i][j] = cnt
+
+for i in d:
+    print(*i, " ")
