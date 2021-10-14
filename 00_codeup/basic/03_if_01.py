@@ -59,6 +59,15 @@ if (num % 2 == 1): print("oh my god")
 else : print("enjoy")
 
 #1161 홀수와 짝수 그리고 더하기
+def even_odd(num):
+    if num % 2 == 0:
+        return "짝수"
+    else : return "홀수"
+    
 num1, num2 = map(int, input().split())
 
-if num1
+str1 = even_odd(num1)
+str2 = even_odd(num2)
+str3 = even_odd(num1+num2)
+
+print(str1+"+"+str2+"="+str3)
