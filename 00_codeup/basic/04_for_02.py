@@ -46,3 +46,27 @@ for i in range(n):
         print("*"+(n-2)*" "+"*", end=" ")
     
     print()
+
+# 1357 삼각형 출력하기 4
+n = int(input())
+
+for i in range(1, n+1):
+    print("*"*i)
+
+for j in range(n-1, 0, -1):
+    print("*"*j)
+
+# 1358 삼각형 출력하기 5
+n = int(input())
+down = int(n/2)
+
+for i in range(1, n+1, 2):
+    print(" "*down+"*"*i)
+    down -= 1 
+
+# 1361 별 계단 만들기
+n = int(input())
+
+for i in range(n):
+    print(" "*i+"**")
+
