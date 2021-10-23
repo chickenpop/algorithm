@@ -1,3 +1,9 @@
+# 1406 love
+n = str(input())
+
+if n == "love":
+    print("I love you.")
+
 # 1408
 password = input()
 code_1 = ""
