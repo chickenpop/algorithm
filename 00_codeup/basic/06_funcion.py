@@ -56,3 +56,31 @@ def f():
     return 3.1415926535897
     
 print(f())
+
+#1535 함수로 가장 큰 값 위치 리턴하기
+def max_pos():
+    max_p = d[0]
+    cnt = 0
+    for i in range(n):
+        if max_p < d[i]:
+            max_p = d[i]
+            cnt = i
+    return cnt+1
+
+n = int(input())
+d = list(map(int, input().split()))
+
+print(max_pos())
+
+#1536 함수로 가장 작은 값 리턴하기
+def min_pos():
+    min_p = d[0]
+    for i in range(len(d)):
+        if min_p > d[i]:
+            min_p = d[i]
+    return min_p
+
+n = int(input())
+d = list(map(int, input().split()))
+
+print(min_pos())
