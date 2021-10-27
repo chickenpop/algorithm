@@ -50,3 +50,9 @@ def pie():
     
 result = pie()    
 print("%f"%result)
+
+#1534
+def f():
+    return 3.1415926535897
+    
+print(f())
