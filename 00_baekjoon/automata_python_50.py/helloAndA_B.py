@@ -36,5 +36,3 @@ print(((a%c)*(b%c))%c)
 a = int(input())
 b = int(input())
 print(a+b)
-
-#2588
