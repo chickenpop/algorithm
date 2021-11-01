@@ -6,7 +6,7 @@ song, song_avg = map(int, input().split())
 melody = song*song_avg-song+1
 print(melody)
 
-5355
+# 5355
 n = int(input())
 
 for _ in range(n):
