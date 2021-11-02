@@ -34,3 +34,19 @@ for i in range(5):
         sum += lst[i]
 
 print(sum//5)
+
+# 1934 최소공배수
+def GCD(a, b):
+    while(b):
+        a, b = b, a%b
+    return a
+
+def LCM(a, b):
+    result = (a*b)//GCD(a, b)
+    return result
+
+n = int(input())
+
+for i in range(n):
+    a, b = map(int, input().split())
+    print(LCM(a, b))
