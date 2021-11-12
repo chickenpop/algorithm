@@ -1,21 +1,21 @@
 #1715 카드 정렬하기
+import heapq
+
 n = int(input())
 card_lst = []
 
 for i in range(n):
-    card_lst.append(int(input()))
+    heapq.heappush(card_lst, int(input()))
 
-card_lst.sort()
-num = []
+print(card_lst)
+
 sum = 0
-card_sum = card_lst[0] + card_lst[1]
-num.append(card_sum)
 
-for i in range(2, n):
-    card_sum += card_lst[i]
-    num.append(card_sum)
-
-for i in range(len(num)):
-    sum += num[i]
+while len(card_lst) > 1:
+    min1 = heapq.heappop(card_lst)
+    min2 = heapq.heappop(card_lst)
+    sum += min1 + min2
+    heapq.heappush(card_lst, min1+min2)
+    print(card_lst)
 
 print(sum)
