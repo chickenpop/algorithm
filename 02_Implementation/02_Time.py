@@ -1,3 +1,4 @@
+# 4-2 시각
 hour = int(input())
 
 cnt = 0
