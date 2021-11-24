@@ -1,5 +1,5 @@
 # 1011 Fly me to the Alpha Centauri
-# 시간초과, 오류 발견
+# 시간초과
 import sys
 
 TestCase = int(input())
@@ -10,7 +10,11 @@ for i in range(TestCase):
     n = 1
     while True:
         if 2*n >= move:
-            print(n+1)
-            break
+            if n*n >= move:
+                print(n+1)
+                break
+            elif n*(n+1) >= move:
+                print(n+2)
+                break
         else:
             n += 1
