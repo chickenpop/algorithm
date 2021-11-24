@@ -3,7 +3,7 @@
 import sys
 '''
 k = int(sys.stdin.readline())        # 아파트 층수
-n = int(int(sys.stdin.readline()))
+n = int(sys.stdin.readline())
 lst = [[0]*15 for i in range(15)] # 리스트 생성
 
 for i in range(15): # k, n의 아파트 인원을 2차원 리스트로 생성
@@ -21,7 +21,7 @@ TestCase = int(sys.stdin.readline()) # 테스트 케이스 수
 
 for i in range(TestCase):
     k = int(sys.stdin.readline())        # 아파트 층수
-    n = int(int(sys.stdin.readline()))   # 아파트 호수
+    n = int(sys.stdin.readline())  # 아파트 호수
 
     lst = [[0]*n for i in range(k+1)] # 리스트 생성
 
