@@ -15,3 +15,5 @@ while error < 100:
         n -= 3
         cnt += 1
         error += 1
+    if error == 100:
+        print(-1)
