@@ -17,7 +17,7 @@
 tri = list(map(int, input().split()))
 
 while sum(tri) != 0:
-    tri.sort()
+    tri.sort()  # 정렬 사용시 런타임 에러
     if tri[0]**2+tri[1]**2 == tri[3]**2:
         print("right")
     else:
