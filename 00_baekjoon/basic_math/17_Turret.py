@@ -10,11 +10,11 @@ for i in range(TestCase):
     lst = [r1, r2, distance]
     lst_max = max(lst)
     lst.remove(lst_max)
-    if r1 == r2 == distance:
+    if r1 == r2 and distance == 0:
         print(-1)
-    elif lst[0]+lst[1] < lst_max:
-        print(0)
-    elif abs(r1+r2) == distance or abs(r1-r2) == distance:
+    elif abs(r1-r2) == distance or r1+r2 == distance:
         print(1)
-    else:
+    elif abs(r1-r2) < distance < r1+r2:
         print(2)
+    else:
+        print(0)
