@@ -1,5 +1,6 @@
 # 2751 수 정렬하기 2
 
+# pypy3로 할 경우 병합정렬, 기존 수 정렬하기 1 방식으로 해결가능하나 python의 경우 시간초과가 뜬다
 # 병합 정렬 Time Out
 def mergeSort(x):
     if len(x) > 1:
