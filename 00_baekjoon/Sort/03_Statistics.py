@@ -9,7 +9,7 @@ for i in range(n):
 
 lst.sort()
 
-print(round(sum(lst)//n))
+print(round(sum(lst)/n))  # 소수점 이하를 반올림
 print(lst[n//2])
 mode = Counter(lst).most_common()  # most_common 빈도수 높은 수
 if n > 1:  # n이 2개 이상이라면
