@@ -1,24 +1,15 @@
 # 1181 단어 정렬
 import sys
 
-
-def SameWord(w, lst):
-    for i in range(len(lst)):
-        if w == lst[i][0]:
-            return False
-    return True
-
-
 n = int(input())
 word = []
 
 for i in range(n):
-    wo = str(input())
-    word_len = len(wo)
-    if SameWord(wo, word) == True:
-        word.append([wo, word_len])
+    word.append(str(sys.stdin.readline()))
 
-word_lst = sorted(word, key=lambda x: (x[1], x[0]))
+remove_word = list(set(word))
+remove_word.sort()
+remove_word.sort(key=len)
 
-for i in range(len(word_lst)):
-    print(word_lst[i][0])
+for i in remove_word:
+    print(i)
