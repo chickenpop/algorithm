@@ -5,7 +5,7 @@ n = int(input())
 word = []
 
 for i in range(n):
-    word.append(str(sys.stdin.readline()))
+    word.append(str(sys.stdin.readline().rstrip()))
 
 remove_word = list(set(word))
 remove_word.sort()
