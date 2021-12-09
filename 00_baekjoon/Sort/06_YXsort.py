@@ -5,7 +5,7 @@ n = int(input())
 Yx = []
 
 for i in range(n):
-    x, y = map(int, sys.stdin.readlines().split())
+    x, y = map(int, sys.stdin.readline().split())
     Yx.append([x, y])
 
 Yx.sort(key=lambda x: (x[1], x[0]))
