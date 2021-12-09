@@ -9,11 +9,11 @@ def SameWord(w, lst):
     return True
 
 
-n = int(sys.stdin.readline())
+n = int(input())
 word = []
 
 for i in range(n):
-    wo = str(sys.stdin.readline())
+    wo = str(input())
     word_len = len(wo)
     if SameWord(wo, word) == True:
         word.append([wo, word_len])
