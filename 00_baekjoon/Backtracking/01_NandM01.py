@@ -1,9 +1,19 @@
 # 15649  N과 M(1)
+n, m = list(map(int, input().split()))
 
-list = ['a', 'b', 'c', 'd', '1', '2']
+s = []
 
-print(''.join(list))
 
-print('_'.join(list))
+def dfs():
+    if len(s) == m:
+        print(' '.join(map(str, s)))
+        return
 
-print('\n'.join(list))
+    for i in range(1, n+1):
+        if i not in s:
+            s.append(i)
+            dfs()
+            s.pop()
+
+
+dfs()
