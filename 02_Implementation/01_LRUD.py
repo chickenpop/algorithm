@@ -2,7 +2,7 @@ n = int(input())
 x, y = 1, 1
 plan = list(input().split())
 
-#LRUD ????
+# LRUD 상하좌우
 dx = [0, 0, -1, 1]
 dy = [-1, 1, 0, 0]
 move_type = ['L', 'R', 'U', 'D']
