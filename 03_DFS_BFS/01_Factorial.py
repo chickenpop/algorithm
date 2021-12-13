@@ -1,5 +1,5 @@
-# 팩토리얼 구현 예제, 같은 문제 beakjoon/recusion/01
-
+# 팩토리얼 구현 예제, 같은 문제 baekjoon/recusion/01
+# 5-5 2가지 방식으로 구현한 팩토리얼
 n = int(input())
 
 
