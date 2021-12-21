@@ -1,8 +1,6 @@
 # 4673 셀프 넘버
 
 def SelfNumber(num):
-    if num > 10000:
-        return
     for i in range(1, num+1):
         s = sum(map(int, str(i))) + i
         if s == num:
@@ -11,7 +9,6 @@ def SelfNumber(num):
         if i == num:
             print(num)
 
-    SelfNumber(num+1)
 
-
-SelfNumber(1)
+for i in range(10001):
+    SelfNumber(i)
