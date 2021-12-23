@@ -10,8 +10,6 @@ dy = [0, 0, -1, 1]
 for i in range(n):
     block.append(list(map(int, input())))
 
-print(block)
-
 
 def bfs(x, y):
     queue = deque()
