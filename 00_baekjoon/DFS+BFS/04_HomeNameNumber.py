@@ -4,30 +4,42 @@ from collections import deque
 n = int(input())  # 정사각형 크기
 
 block = []
-visited = [[0]*(n) for _ in range(n)]
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
 
 for i in range(n):
     block.append(list(map(int, input())))
 
-
-def dfs(x, y):
-    if x >= n or x <= -1 or y >= n or y <= -1:
-        return
-    if block[x][y] == 1:
-        visited[x][y] = 1
-        dfs(x-1, y)
-        dfs(x+1, y)
-        dfs(x, y-1)
-        dfs(x, y+1)
+print(block)
 
 
-dfs(0, 0)
+def bfs(x, y):
+    queue = deque()
+    queue.append((x, y))
+    cnt = 0
+    while queue:
+        x, y = queue.popleft()
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if nx >= n or nx <= -1 or ny >= n or ny <= -1:
+                continue
+            if block[nx][ny] == 0:
+                continue
+            if block[nx][ny] == 1:
+                block[nx][ny] = 0
+                cnt += 1
+                queue.append((nx, ny))
+    return cnt
 
-cnt = 0
 
+cnt = []
 for i in range(n):
     for j in range(n):
-        if visited[i][j] == 1:
-            cnt += 1
+        if block[i][j] == 1:
+            cnt.append(bfs(i, j))
 
-print(cnt)
+cnt.sort()
+print(len(cnt))
+for i in cnt:
+    print(i)
