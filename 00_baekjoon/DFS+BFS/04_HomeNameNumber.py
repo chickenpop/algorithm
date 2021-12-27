@@ -14,7 +14,8 @@ for i in range(n):
 def bfs(x, y):
     queue = deque()
     queue.append((x, y))
-    cnt = 0
+    block[x][y] = 0
+    cnt = 1
     while queue:
         x, y = queue.popleft()
         for i in range(4):
