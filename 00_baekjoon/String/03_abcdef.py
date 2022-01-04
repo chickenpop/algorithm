@@ -1,18 +1,8 @@
 # 10809 알파벳 찾기
 
-s = list(map(str, input()))  # 소문자로 이루어진 단어
+s = str(input())
 
-abc = [-1] * 24  # 알파벳
-abc_over = [0] * 24  # 알파벳 중복 여부
-cnt = 0
+abc = list(range(97, 123))
 
-for i in s:
-    index = ord(i) - 97
-    abc_over[index] += 1
-    if abc_over[index] > 1:
-        cnt += 1
-        continue
-    abc[index] = cnt
-    cnt += 1
-
-print(abc)
+for i in abc:
+    print(s.find(chr(i)), end=" ")  # find 문자열에서 처음등장한 번호
