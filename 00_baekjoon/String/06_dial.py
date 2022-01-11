@@ -1,6 +1,6 @@
 # 5622 다이얼
 
-dial = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQS', 'TUV', 'WXZ']
+dial = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
 
 word = list(input())
 time = 0
