@@ -1,31 +1,27 @@
 # 10828 스택
 
 stack = []  # 스택
-order = []  # 명령저장
 n = int(input())  # 스택 명령 총 횟수
 
 for i in range(n):
-    index = 0
-    order.append(input().split())
-    if order[index][0] == 'push':
-        stack.append(order[i][1])
-        index += 1
-    elif order[index][0] == 'pop':
+    order = input().split()
+
+    if order[0] == 'push':  # 스택에 정수를 넣는다.
+        stack.append(order[1])
+    elif order[0] == 'pop':  # 스택에서 가장 위에 있는 정수 뺀다. 없으면 -1
         if len(order) > 0:
-            stack.pop()
+            print(stack.pop())
         else:
             print(-1)
-        if index != 0:
-            index -= 1
-    elif order[index][0] == 'size':
+    elif order[0] == 'size':  # 스택의 정수 갯수
         print(len(order))
-        index += 1
-    elif order[index][0] == 'empty':
+    elif order[0] == 'empty':  # 스택이 비어 있으면 1, 아니면 0
         if len(order) == 0:
             print(1)
-            index += 1
         else:
             print(0)
-            index += 1
-    else:
-        print(-1)
+    elif order[0] == 'top':  # 가장 위에 있는 정수 출력, 정수 없으면 -1
+        if len(stack) == 0:
+            print(-1)
+        else:
+            print(stack[-1])
