@@ -1,10 +1,10 @@
 # 10828 스택
-
+import sys
 stack = []  # 스택
 n = int(input())  # 스택 명령 총 횟수
 
 for i in range(n):
-    order = input().split()
+    order = sys.stdin.readline().split()
 
     if order[0] == 'push':  # 스택에 정수를 넣는다.
         stack.append(order[1])
