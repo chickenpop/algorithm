@@ -1,18 +1,23 @@
 # 4949 균형잡힌 세상
+import sys
 
 while True:
     stack = []
     flag = True
-    Input = list(map(str, input()))
+    Input = list(map(str, sys.stdin.readline()))
     if Input == ".":
         break
     for i in Input:
         if i == "(" or i == "[":
             stack.append(i)
-        elif i == ")" or i == "]":
-            if not stack or stack[-1] == "(" and i == ")":
+        elif i == ")":
+            if stack and stack[-1] == "(":
                 stack.pop()
-            elif not stack or stack[-1] == "[" and i == "]":
+            else:
+                flag = False
+                break
+        elif i == "]":
+            if stack and stack[-1] == "[":
                 stack.pop()
             else:
                 flag = False
