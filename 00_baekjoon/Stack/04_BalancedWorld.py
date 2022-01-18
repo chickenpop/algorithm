@@ -1,28 +1,22 @@
 # 4949 균형잡힌 세상
 
-stack = [1]
-
-while stack[0] != 0:
-  stack = []
-  Input = list(map(str, input()))
-  for i in Input:
-    if i == "(":
-      stack.append(1)
-    elif i == ")":
-      stack.append(-1)
-    elif i == "[":
-      stack.append(1.3)
-    elif i == "]":
-      stack.append(-1.3)
-    elif i == ".":
-      stack.append(0)
+while True:
+    stack = []
+    flag = True
+    Input = list(map(str, input()))
+    if Input == ".":
+        break
+    for i in Input:
+        if i == "(" or i == "[":
+            stack.append(i)
+        elif i == ")" and stack[-1] == "(":
+            stack.pop()
+        elif i == "]" and stack[-1] == "[":
+            stack.pop()
+        else:
+            flag == False
+            break
+    if flag == True:
+        print("yes")
     else:
-      continue
-    if sum(stack) < 0:
-      print("NO")
-      break
-  if sum(stack) == 0 and stack[0] != 0:
-    print("YES")
-  elif stack[0] != 0 and sum(stack) > 0:
-    print("NO")
-    
+        print("no")
