@@ -9,13 +9,14 @@ while True:
     for i in Input:
         if i == "(" or i == "[":
             stack.append(i)
-        elif i == ")" and stack[-1] == "(":
-            stack.pop()
-        elif i == "]" and stack[-1] == "[":
-            stack.pop()
-        else:
-            flag == False
-            break
+        elif i == ")" or i == "]":
+            if not stack or stack[-1] == "(" and i == ")":
+                stack.pop()
+            elif not stack or stack[-1] == "[" and i == "]":
+                stack.pop()
+            else:
+                flag = False
+                break
     if flag == True:
         print("yes")
     else:
