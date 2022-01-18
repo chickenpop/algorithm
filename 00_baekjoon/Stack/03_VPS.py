@@ -9,8 +9,11 @@ for i in range(n):
             stack.append(1)
         else:
             stack.append(-1)
+        if sum(stack) < 0:
+            print("NO")
+            break
     if sum(stack) == 0:
         print("YES")
-    else:
+    elif sum(stack) > 0:
         print("NO")
     print(stack)
