@@ -1,15 +1,28 @@
 # 1874 스택 수열
-
+import sys
 stack = []
-n = int(input())
-n_stack = [i for i in range(n, 0, -1)]
-print(n_stack)
+n = int(sys.stdin.readline())
+flag = True
+start = 1
 for i in range(n):
-    Input = int(input())
-    for i in range(len(n_stack)):
-        if i == Input:
-            n_stack.pop()
+    Input = int(sys.stdin.readline())
+    for i in range(start, n+2):
+        if i == Input and stack and i == stack[-1]:
+            stack.pop()
+            print("-")
+            start = i
             break
-        elif i in n_stack:
+        elif Input in stack and stack[-1] == Input:
+            stack.pop()
+            print("-")
+            start = i
+            break
+        elif Input in stack and stack[-1] != Input:
+            print("NO")
+            flag = False
+            break
+        else:
             stack.append(i)
-    print(stack)
+            print("+")
+    if flag == False:
+        break
