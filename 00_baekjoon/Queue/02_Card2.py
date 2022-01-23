@@ -13,4 +13,3 @@ while que:
         que.popleft()
         MoveRightCard = que.popleft()
         que.append(MoveRightCard)
-        print(que)
