@@ -4,15 +4,10 @@ from collections import deque
 
 n, k = map(int, sys.stdin.readline().split())
 queInput = deque([i for i in range(1, n+1)])
-queOutput = deque()
-index = n - k
+que_lst = []
 
 while queInput:
-    if len(queInput) == n:
-        queInput.rotate(index)
-    else:
-        queInput.rotate(k)  # 큐를 k만큼 회전시킴
-    print(queInput)
-    queOutput.append(queInput.pop())
+    queInput.rotate(-k)  # 큐를 k만큼 회전시킴
+    que_lst.append(str(queInput.pop()))  # .join 사용을 위해 string으로 삽입
 
-print(queOutput)
+print("<", ", ".join(que_lst), ">", sep="")  # 구분기호 사용 .join, sep 공백제거
