@@ -1,4 +1,3 @@
-# 1966 프린터 큐
 import sys
 from collections import deque
 
@@ -11,14 +10,9 @@ for i in range(TestCase):
     MaxQue = max(que)
     if MaxQue == que[0]:
       m_move += 1
-      if MaxQue == que[m]:
+      if len(que) == 1:
         print(m_move)
-        break
-      que.pop()
+      que.popleft()
     else:
       data = que.popleft()
       que.append(data)
-      if m == 0:
-        m = len(que) - 1
-      else:
-        m -= 1
