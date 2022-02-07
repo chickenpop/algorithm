@@ -1,4 +1,5 @@
 # 10866 덱
+# 단순 구현 문제
 from collections import deque
 import sys
 
@@ -15,12 +16,14 @@ for i in range(n):
         if len(queue) == 0:
             print(-1)
         else:
-            queue.popleft()
+            popOutput = queue.popleft()
+            print(popOutput)
     elif input[0] == 'pop_back':
         if len(queue) == 0:
             print(-1)
         else:
-            queue.pop()
+            popOutput = queue.pop()
+            print(popOutput)
     elif input[0] == 'size':
         print(len(queue))
     elif input[0] == 'empty':
