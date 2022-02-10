@@ -19,13 +19,13 @@ for i in lst:
             que.popleft()
             break
         else:
-            if que.index(i) < len(que)/2:  # 인덱스 위치가 길이의 절반보다 작으면 맨앞의 수를 맨뒤로 이동
-                while que[0] != i:
-                    que.rotate(1)
-                    cnt += 1
-            else:  # 인덱스 위치가 길이의 절반보다 크면 맨뒤에 수를 맨앞으로
+            if que.index(i) < len(que)/2:  # 인덱스 위치가 길이의 절반보다 크면 맨뒤에 수를 맨앞으로
+                que.rotate(-1)
+                print(que)
+                cnt += 1
+            else:  # 인덱스 위치가 길이의 절반보다 작으면 맨앞의 수를 맨뒤로 이동
                 while que[0] != i:  # i이랑 같지 않으면 계속 반복
-                    que.rotate(-1)
+                    que.rotate(1)
                     cnt += 1
 
 print(cnt)
