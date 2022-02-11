@@ -2,32 +2,36 @@
 
 ## 백준
 
-### python 배우기
+#### python 배우기(https://github.com/chickenpop/algorithm/tree/master/00_baekjoon/automata_python_50.py)
 
-### 기본 수학 1, 2
+#### 기본 수학 1, 2(https://github.com/chickenpop/algorithm/tree/master/00_baekjoon/basic_math)
 
-### 브루트 포스
+#### 브루트 포스(https://github.com/chickenpop/algorithm/tree/master/00_baekjoon/BruteForce)
 
-### 함수
+#### 함수(https://github.com/chickenpop/algorithm/tree/master/00_baekjoon/function)
 
-### 그리드
+#### 그리드(https://github.com/chickenpop/algorithm/tree/master/00_baekjoon/greedy)
 
-### 재귀\* >> DFS/BFS
+#### 재귀(https://github.com/chickenpop/algorithm/tree/master/00_baekjoon/Recursion) 
+
+#### DFS/BFS(https://github.com/chickenpop/algorithm/tree/master/00_baekjoon/DFS%2BBFS)
+
+---
 
 ## 코드업
 
-### 1. 파이썬 기초 100제 2. 코드업 기초 문제집
+#### 1. 파이썬 기초 100제(https://github.com/chickenpop/algorithm/tree/master/00_codeup/codeup_python_100)
 
-## 1장 그리드
+#### 2. 코드업 기초 문제집(https://github.com/chickenpop/algorithm/tree/master/00_codeup/basic)
 
-#### 1. 거스름돈 2. 큰 수의 법칙 3. 숫자 카드 게임 4. 1이 될때까지
+---
+## 코딩테스트 책(파이썬)
 
-## 2장 구현
+#### 1장 그리드(https://github.com/chickenpop/algorithm/tree/master/01_greedy)
 
-#### 1. 상하좌우 2. 시각 3. 왕실의 나이트
+#### 2장 구현(https://github.com/chickenpop/algorithm/tree/master/02_Implementation)
 
-## 3장 DFS/BFS
+#### 3장 DFS/BFS(https://github.com/chickenpop/algorithm/tree/master/03_DFS_BFS)
 
-#### 기본 예제 00, 02, 03, 04번 문제들
+#### 4장 정렬(https://github.com/chickenpop/algorithm/tree/master/04_Sort)
 
-#### 1. 팩토리얼 2. GCD 3. 음료수 얼려 먹기 4. 미로탈출
